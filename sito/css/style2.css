@@ -1,0 +1,258 @@
+@font-face {
+  font-family: 'Aut Aut Grotesk';
+  src: url('AutAutGrotesk.woff2') format('woff2'),
+       url('AutAutGrotesk.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'Aut Aut Grotesk', Helvetica, sans-serif;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 34px;
+  right: 34px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 0 0;
+  z-index: 1000;
+  transition:
+  transform 0.3s ease,
+  opacity 0.3s ease;
+
+opacity: 1;
+transform: translateY(0);
+pointer-events: auto;
+}
+
+header.hide {
+  opacity: 0;
+  transform: translateY(0); /* scivola un po’ più dolcemente */
+  pointer-events: none;
+}
+
+
+
+header .Name a,
+header .About {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header .Name a:hover,
+header .About:hover {
+  color: #d8d9d8;
+}
+
+.frame {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 0px;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+.frame .div {
+  width: 100%;
+  max-width: 1440px;
+  position: relative;
+}
+
+.frame .Graphic,
+.frame .element,
+.frame .contact,
+.frame .years {
+  position: absolute;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Posizionamento base su schermi grandi */
+.frame .Graphic {
+  width: 676px;
+  top: 89px;
+  left: 365px;
+}
+
+.frame .element {
+  width: 223px;
+  top: 214px;
+  left: 365px;
+}
+.frame.element2{
+  display: none;
+}
+.frame .contact {
+  display: block;
+  width: 114px;
+  top: 230px;
+  left: 10px;
+  font-weight: bold;
+}
+.frame .contact2 {
+  display: none;
+}
+.frame .contact3 {
+  display: none;
+}
+
+.frame .years {
+  display: block;
+  width: 102px;
+  top: 320px;
+  left: 243px;
+  text-align: right;
+  line-height: 18px;
+}
+.frame .years2 {
+display: none;
+}
+.frame .years3 {
+  display: none;
+  }
+/* Responsive */
+@media (max-width: 1024px) {
+
+  .frame .Graphic {
+    left: 280px;
+    width: 600px;
+    padding-top: 0px;
+  }
+.frame.contact{
+  padding-top: 100px;
+}
+  .frame .element {
+    left: 280px;
+ 
+  }
+
+  .frame .years {
+    left: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    left: 16px;
+    right: 16px;
+  }
+  .frame .Graphic {
+    font-size: 14px;
+    left: 0px;
+    width: 520px;
+  }
+  .frame .contact {
+    display: none;
+    font-size: 14px;
+    left: 0px;
+
+  }
+  .frame .contact2 {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    left: 0px;
+    padding-top: 230px;
+    line-height: 18px;
+
+  }
+  .frame .element {
+    position: absolute;
+    top: 215px;
+    font-size: 14px;
+    left: 200px;
+  }
+  .frame .years {
+    display: none;
+  }
+  .frame .years2 {
+    position: absolute;
+    top: 320px;
+    display: block;
+    line-height: 18px;
+    font-size: 14px;
+    width: 180px;
+    text-align: right;
+  }
+}
+
+@media (max-width: 480px) {
+  .frame{
+padding-left: 8px;
+  }
+  
+  
+  header {
+    left: 8px;
+    right: 8px;
+    font-size: 12px;
+  }
+
+  .frame .Graphic {
+    font-size: 12px;
+    left: 0px;
+    width: 380px;
+    line-height: 14px;
+    
+  }
+
+  .frame .contact {
+    display: none;
+    font-size: 12px;
+  
+  
+  }
+
+  .frame .contact2 {
+    display: none;
+  }
+  .frame .contact3 {
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    left: 8px;
+    padding-top: 240px;
+    line-height: 14px;
+  }
+
+
+  .frame .element {
+    position: absolute;
+    top: 230px;
+    font-size: 12px;
+    left: 180px;
+    line-height: 14px;
+  }
+
+  .frame .years {
+    display: none;
+  }
+  .frame .years2 {
+    display: none;
+    }
+  .frame .years3 {
+    position: absolute;
+    top: 312px;
+    display: block;
+    line-height: 14px;
+    font-size: 12px;
+    width: 160px;
+    text-align: right;
+  }
+}

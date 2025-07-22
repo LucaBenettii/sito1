@@ -1,0 +1,340 @@
+@font-face {
+  font-family: 'Aut Aut Grotesk';
+  src: url('AutAutGrotesk.woff2') format('woff2'),
+       url('AutAutGrotesk.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'Aut Aut Grotesk', Helvetica, sans-serif;
+  background-color: white;
+  color: black;
+  scroll-behavior: auto;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 16px;
+  right: 16px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 0;
+  z-index: 1000;
+
+  transition:
+  transform 0.3s ease,
+  opacity 0.3s ease;
+
+opacity: 1;
+transform: translateY(0);
+pointer-events: auto;
+}
+
+header.hide {
+  opacity: 0;
+  transform: translateY(0); /* scivola un po’ più dolcemente */
+  pointer-events: none;
+}
+
+
+header .Name a,
+header .About a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header .Name a:hover,
+header .About a:hover {
+  color: #d8d9d8;
+}
+
+.Name, .About a {
+  font-size: 16px;
+  white-space: nowrap;
+}
+header.invert .Name a,
+header.invert .About a {
+  color: white; /* su sfondo scuro */
+}
+/* MAIN */
+main {
+  padding-top: 54px; /* spazio per header fisso */
+}
+
+/* SECTIONS */
+.section {
+  max-width: 1372px;
+  margin: 8px 0px 16px ;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.section .overlay {
+  position: absolute;
+  top: 61px;
+  left: 16px;
+  width: 1408px;
+  height: 735px;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section:hover .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+.Text {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.5;
+}
+.section .overlay2 {
+  position: absolute;
+  top: 814px;
+  left: 16px;
+  width: 1408px;
+  height: 735px;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Text2 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.section:hover .overlay2 {
+  opacity: 1;
+  pointer-events: auto;
+}
+.section .overlay3 {
+  position: absolute;
+  top: 1562px;
+  left: 16px;
+  width: 1408px;
+  height: 735px;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Text3 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.section:hover .overlay3 {
+  opacity: 1;
+  pointer-events: auto;
+}
+.section .overlay4 {
+  position: absolute;
+  top: 2310px;
+  left: 16px;
+  width: 1408px;
+  height: 735px;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Text4 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.section:hover .overlay4 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* IMMAGINI */
+.section img {
+  width: 1408px;
+  max-width: 1408px;
+  max-height: 735px;
+  left: 16px;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* LABELS SOTTO IMMAGINE */
+.labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+
+  font-weight: bold;
+  color: black;
+  font-size: 1.2vw;
+  white-space: nowrap;
+
+  max-width: 1372px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.labels div {
+  cursor: pointer;
+}
+
+.labels div:hover {
+  color: #d8d9d8;
+}
+
+/* CENTRO */
+.anno1, .anno2, .anno3 {
+  text-align: center;
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+/* LINK SECTIONS */
+.section-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+/* Responsive */
+/* RESPONSIVE - TABLET */
+@media (max-width: 768px) {
+  header {
+    left: 16px;
+    right: 16px;
+  }
+  .section {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+    /* IMMAGINI */
+    .section img {
+    width: 736px;
+   height: 385px;
+    top: 10px;
+    }
+  .section .overlay{
+    width: 736px;
+    height: 385px;
+    top: 62px;
+    left: 16px;
+  }
+  .section .overlay2{
+    width: 736px;
+    height: 385px;
+    top: 462px;
+    left: 16px;
+  }
+  .section .overlay3{
+    width: 736px;
+    height: 385px;
+    top: 863px;
+    left: 16px;
+  }
+  .section .overlay4{
+    width: 736px;
+    height: 385px;
+    top: 1264px;
+    left: 16px;
+  }
+
+}
+
+/* RESPONSIVE - SMARTPHONE */
+@media (max-width: 480px) {
+  /* HEADER */
+    header {
+      left: 8px;
+      right: 8px;
+      padding: 8px 0;
+      height: 20px;
+      flex-direction: row;
+      align-items: center;
+    }
+
+  header .Name a,
+  header .About a {
+    font-size: 12px;
+  }
+
+  .Name, .About a {
+    font-size: 12px;
+  }
+  main {
+    padding: 30px 0 0;
+  }
+  /* SECTION */
+
+  .section {
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 8px;
+   
+  }
+
+  /* IMMAGINI */
+  .section img {
+  height: 243px;
+  width: 464px;
+  }
+.section .overlay{
+  width: 464px;
+  height: 243px;
+  top: 38px;
+  left: 8px;
+}
+.section .overlay2{
+  width: 464px;
+  height: 243px;
+  top: 289px;
+  left: 8px;
+}
+.section .overlay3{
+  width: 464px;
+  height: 243px;
+  top: 540px;
+  left: 8px;
+}
+.section .overlay4{
+  width: 464px;
+  height: 243px;
+  top: 791px;
+  left: 8px;
+}
+}

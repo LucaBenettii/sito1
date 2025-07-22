@@ -1,0 +1,344 @@
+@font-face {
+  font-family: 'Aut Aut Grotesk';
+  src: url('AutAutGrotesk.woff2') format('woff2'),
+       url('AutAutGrotesk.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'Aut Aut Grotesk', Helvetica, sans-serif;
+  background-color: white;
+  color: black;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 16px;
+  right: 16px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 0;
+  z-index: 1000;
+  transition:
+  transform 0.3s ease,
+  opacity 0.3s ease;
+
+opacity: 1;
+transform: translateY(0);
+pointer-events: auto;
+}
+
+header.hide {
+  opacity: 0;
+  transform: translateY(0); /* scivola un po’ più dolcemente */
+  pointer-events: none;
+}
+
+
+
+header .Name a,
+header .About a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header .Name a:hover,
+header .About a:hover {
+  color: #d8d9d8;
+}
+
+.Name, .About a {
+  font-size: 16px;
+  white-space: nowrap;
+}
+/* MAIN */
+main {
+  padding-top: 54px; /* spazio per header fisso */
+}
+.Description{
+  position: relative;
+  left: 16px;
+  top: 110px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 18px;
+}
+.Ezel{
+  position: relative;
+  width: 589px;
+  left: 365px;
+  top: -158px;
+  font-size: 16px;
+  line-height: 18px;
+}
+.Description.mobile{
+  display: none;
+}
+.Description.tablet{
+  display: none;
+}
+.cover{
+    position: absolute;
+  width: 1408px;
+  height: 735px;
+    right: 16px;
+    left: 16px;
+    display: block;
+    object-fit: cover;
+    top: 510px;
+  }
+ 
+  .pag2{
+    position: absolute;
+    width: 704px;
+    height: 355px;
+    top:1245px ;
+      right: 16px;
+      left: 16px;
+      display: block;
+      object-fit: cover;
+    }
+    .pag3{
+      position: absolute;
+      width: 704px;
+      height: 355px;
+      top: 1245px;
+        right: 16px;
+        left: 720px;
+        display: block;
+        object-fit: cover;
+      }
+    .pag4{
+      position: absolute;
+      width: 704px;
+      height: 355px;
+      top: 1600px;
+        right: 16px;
+        left: 16px;
+        display: block;
+        object-fit: cover;
+      }
+      .pag5{
+        position: absolute;
+        width: 704px;
+        height: 355px;
+        top:1600px ;
+          right: 16px;
+          left: 720px;
+          display: block;
+          object-fit: cover;
+
+      }
+      
+      .vid1{
+        position: absolute;
+        top: 1955px;
+        width: 1408px;
+        height: 735px;
+        overflow: hidden;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+        left: 16px;
+        right: 16px;
+      }
+      
+
+      
+
+/* RESPONSIVE - TABLET */
+@media (max-width: 768px) {
+  header {
+    left: 16px;
+    right: 16px;
+  }
+  .Description{
+    display: none;
+  }
+  .Description.tablet{
+    display: block;
+    left: 16px;
+    top: 50px;
+    line-height: 18px;
+  }
+  .Ezel {
+    left: 200px;
+    width: 540px;
+    top: -218px; ;
+    line-height: 18px;
+  }
+  .cover{
+    position: absolute;
+  width: 736px;
+  height: 384.2px;
+    right: 16px;
+    left: 16px;
+    display: block;
+    object-fit: cover;
+    top: 400px;
+  }
+
+    .pag2{
+      position: absolute;
+      width: 368px;
+      height: 276px;
+      top: 784.2px;
+        right: 16px;
+        left: 16px;
+        display: block;
+        object-fit: cover;
+      }
+      .pag3{
+        position: absolute;
+        width: 368px;
+        height: 276px;
+        top: 784.2px;
+          right: 16px;
+          left: 384px;
+          display: block;
+          object-fit: cover;
+        }
+      .pag4{
+        position: absolute;
+        width: 368px;
+        height: 276px;
+        top: 1060.2px;
+          right: 16px;
+          left: 16px;
+          display: block;
+          object-fit: cover;
+        }
+        .pag5{
+            position: absolute;
+            width: 368px;
+            height: 276px;
+            top: 1060.2px;
+              right: 16px;
+              left: 384px;
+              display: block;
+              object-fit: cover;
+            }
+
+
+          .vid1{
+            position: absolute;
+            width: 736px;
+            height: 384.2;
+              right: 16px;
+              left: 16px;
+              display: block;
+              top: 1336.2px; ;
+          }
+}
+
+
+
+/* RESPONSIVE - SMARTPHONE */
+  @media (max-width: 480px) {
+    header {
+      left: 8px;
+      right: 8px;
+    }
+    .Name{
+      font-size: 12px;
+    }
+    .About a{
+      font-size: 12px;
+    }
+  
+    .Description {
+      display: none;
+    }
+    .Description.tablet{
+      display: none;
+    }
+    .Description.mobile {
+      display: block;
+      left: 8px;
+      top: 53px;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  
+    .Ezel {
+      left: 140px;
+      width: 320px;
+      top: -196px;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  
+    .cover {
+      position: absolute;
+      width: 464px;
+      height: 261px;
+      left: 8px;
+      right: 8px;
+      top:380px;
+      display: block;
+      object-fit: cover;
+    }
+    .pag2 {
+      position: absolute;
+      width: 232px;
+      height: 174px;
+      top: 641px;
+      left: 8px;
+      right: 8px;
+      display: block;
+      object-fit: cover;
+    }
+  
+    .pag3 {
+      position: absolute;
+      width: 232px;
+      height: 174px;
+      top:641px;
+      left: 240px;
+      right: 8px;
+      display: block;
+      object-fit: cover;
+    }
+  
+    .pag4 {
+      position: absolute;
+      width: 232px;
+      height: 174px;
+      top: 815px;
+      left: 8px;
+      right: 8px;
+      display: block;
+      object-fit: cover;
+    }
+    .pag5 {
+        position: absolute;
+        width: 232px;
+        height: 174px;
+        top: 815px;
+        left: 240px;
+        right: 8px;
+        display: block;
+        object-fit: cover;
+      }
+  
+
+    .vid1{
+      position: absolute;
+      width: 464px;
+      height: auto;
+      left: 8px;
+      right: 8px;
+      top: 989px;
+      display: block;
+      object-fit: cover;
+    }
+  }
