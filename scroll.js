@@ -17,3 +17,16 @@ window.addEventListener('scroll', () => {
 
   lastScrollY = currentScrollY;
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".section").forEach(section => {
+    section.addEventListener("click", () => {
+      const overlay = section.querySelector(".overlay");
+      if (overlay) {
+        const isVisible = overlay.style.opacity === "1";
+        overlay.style.opacity = isVisible ? "0" : "1";
+        overlay.style.pointerEvents = isVisible ? "none" : "auto";
+      }
+    });
+  });
+});

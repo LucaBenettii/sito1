@@ -75,7 +75,7 @@ main {
   position: relative;
   width: 589px;
   left: 365px;
-  top: -102px;
+  top: -72px;
   font-size: 16px;
   line-height: 18px;
 }
@@ -170,7 +170,7 @@ main {
   .Primalalibertà {
     left: 200px;
     width: 540px;
-    top: -162px; ;
+    top: -128px; ;
     line-height: 18px;
   }
   .cover{
@@ -239,104 +239,118 @@ main {
 
 
 /* RESPONSIVE - SMARTPHONE */
-  @media (max-width: 480px) {
-    header {
-      left: 8px;
-      right: 8px;
-    }
-    .Name{
-      font-size: 12px;
-    }
-    .About a{
-      font-size: 12px;
-    }
-  
-    .Description {
-      display: none;
-    }
-    .Description.tablet{
-      display: none;
-    }
-    .Description.mobile {
-      display: block;
-      left: 8px;
-      top: 53px;
-      font-size: 12px;
-      line-height: 14px;
-    }
-  
-    .Primalalibertà {
-      left: 140px;
-      width: 320px;
-      top: -140px;
-      font-size: 12px;
-      line-height: 14px;
-    }
-  
-    .cover {
-      position: absolute;
-      width: 464px;
-      height: 261px;
-      left: 8px;
-      right: 8px;
-      top:350px;
-      display: block;
-      object-fit: cover;
-    }
-  
-    .pag1 {
-      position: absolute;
-      width: 232px;
-      height: auto;
-      top: 611px;
-      left: 8px;
-      right: 8px;
-      display: block;
-      object-fit: cover;
-    }
-  
-    .pag2 {
-      position: absolute;
-      width: 240px;
-      height: 174px;
-      top: 611px;
-      left: 232px;
-      right: 8px;
-      display: block;
-      object-fit: cover;
-    }
-  
-    .pag3 {
-      position: absolute;
-      width: 232px;
-      height: 174px;
-      top:785px;
-      left: 8px;
-      right: 8px;
-      display: block;
-      object-fit: cover;
-    }
-  
-    .pag4 {
-      position: absolute;
-      width: 232px;
-      height: 174px;
-      top: 785px;
-      left: 240px;
-      right: 8px;
-      display: block;
-      object-fit: cover;
-    }
-  
-
-    .vid1{
-      position: absolute;
-      width: 464px;
-      height: auto;
-      left: 8px;
-      right: 8px;
-      top: 959px;
-      display: block;
-      object-fit: fill;
-    }
+@media (max-width: 480px) {
+  * {
+    box-sizing: border-box;
   }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 8px;
+    right: 8px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .Name a, .About a {
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+  }
+
+
+  .Description {
+    display: none;
+  }
+
+  .Description.tablet {
+    display: none;
+  }
+
+  .Description.mobile {
+    display: block;
+    position: absolute;
+    left: 8px;
+    top: 53px;
+    font-size: 12px;
+    line-height: 14px;
+    max-width: calc(100% - 16px);
+  }
+
+  .Primalalibertà {
+    position: absolute;
+    left: 150px;
+    top: 53px;
+    width: calc(60% - 16px);
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .cover {
+    position: absolute;
+    width: calc(100% - 16px);
+    height: 216px;
+    left: 8px;
+    top: 300px;
+    display: block;
+    object-fit: cover;
+  }
+
+  .pag1,
+  .pag3 {
+    position: absolute;
+    width: calc(50%);
+    height: 149px;
+    left: 8px;
+    display: block;
+    object-fit: cover;
+  }
+
+  .pag1 {
+    top: 516px;
+  }
+
+  .pag3 {
+    top: 665px;
+  }
+
+  .pag2,
+  .pag4 {
+    position: absolute;
+    width: calc(50% - 8px);
+    height: 149px;
+    left: 50%;
+    margin-right: 8px;
+    display: block;
+    object-fit: cover;
+  }
+
+  .pag2 {
+    top: 516px;
+  }
+
+  .pag4 {
+    top: 665px;
+  }
+
+
+  .vid1 {
+    position: absolute;
+    width: calc(100% - 16px);
+    height: 216px;
+    left: 8px;
+    top: 814px;
+    display: block;
+    object-fit: fill;
+  }
+}
