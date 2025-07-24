@@ -247,6 +247,8 @@ main {
     header {
       left: 8px;
       right: 8px;
+      top: 0px;
+      height: 33px;
     }
     .Name{
       font-size: 12px;
@@ -263,82 +265,77 @@ main {
     }
     .Description.mobile {
       display: block;
+      position: absolute;
       left: 8px;
       top: 53px;
       font-size: 12px;
       line-height: 14px;
+      max-width: calc(100% - 16px);
     }
   
     .Ezel {
-      left: 140px;
-      width: 320px;
-      top: -196px;
+      position: absolute;
+      left: 150px;
+      top: 53px;
+      width: calc(60% - 16px);
       font-size: 12px;
       line-height: 14px;
     }
   
+  
     .cover {
       position: absolute;
-      width: 464px;
-      height: 261px;
+      width: calc(100% - 16px);
+      height: 216px;
       left: 8px;
-      right: 8px;
-      top:380px;
+      top: 440px;
+      display: block;
+      object-fit: cover;
+    }
+    .pag2,
+    .pag4 {
+      position: absolute;
+      width: calc(50%);
+      height: 149px;
+      left: 8px;
       display: block;
       object-fit: cover;
     }
     .pag2 {
-      position: absolute;
-      width: 232px;
-      height: 174px;
-      top: 641px;
-      left: 8px;
-      right: 8px;
-      display: block;
-      object-fit: cover;
-    }
-  
-    .pag3 {
-      position: absolute;
-      width: 232px;
-      height: 174px;
-      top:641px;
-      left: 240px;
-      right: 8px;
-      display: block;
-      object-fit: cover;
+      top: 656px;
     }
   
     .pag4 {
-      position: absolute;
-      width: 232px;
-      height: 174px;
-      top: 815px;
-      left: 8px;
-      right: 8px;
-      display: block;
-      object-fit: cover;
+      top: 804px;
     }
-    .pag5 {
-        position: absolute;
-        width: 232px;
-        height: 174px;
-        top: 815px;
-        left: 240px;
-        right: 8px;
-        display: block;
-        object-fit: cover;
-      }
+    .pag3,
+  .pag5 {
+    position: absolute;
+    width: calc(50% - 8px);
+    height: 149px;
+    left: 50%;
+    margin-right: 8px;
+    display: block;
+    object-fit: cover;
+  }
+
+  .pag3 {
+    top: 656px;
+  }
+
+  .pag5 {
+    top: 804px;
+  }
+
   
 
     .vid1{
       position: absolute;
-      width: 464px;
-      height: auto;
+      width: calc(100% - 16px);
+      height: 216px;
       left: 8px;
-      right: 8px;
-      top: 989px;
+      top: 953px;
       display: block;
-      object-fit: cover;
+      object-fit: fill;
     }
   }
