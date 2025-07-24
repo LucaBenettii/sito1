@@ -30,3 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const video = document.querySelector('.vid1');
+  video.muted = true;
+  video.play().catch(() => {
+    // Autoplay bloccato, riproduci al primo tocco
+    document.body.addEventListener('click', () => video.play());
+  });
+});

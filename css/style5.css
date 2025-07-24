@@ -76,7 +76,7 @@
     position: relative;
     width: 589px;
     left: 365px;
-    top: -122px;
+    top: -86px;
     font-size: 16px;
     line-height: 18px;
   }
@@ -220,17 +220,34 @@
   
   
   /* RESPONSIVE - SMARTPHONE */
-    @media (max-width: 480px) {
-      header {
-        left: 8px;
-        right: 8px;
-      }
-      .Name{
-        font-size: 12px;
-      }
-      .About a{
-        font-size: 12px;
-      }
+      @media (max-width: 480px) {
+        * {
+          box-sizing: border-box;
+        }
+      
+        body, html {
+          margin: 0;
+          padding: 0;
+          overflow-x: hidden;
+        }
+      
+        header {
+          position: fixed;
+          top: 0;
+          left: 8px;
+          right: 8px;
+          height: 40px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 1000;
+        }
+      
+        .Name a, .About a {
+          font-size: 12px;
+          text-decoration: none;
+          color: black;
+        }
     
       .Description {
         display: none;
@@ -240,60 +257,59 @@
       }
       .Description.mobile {
         display: block;
+        position: absolute;
         left: 8px;
         top: 53px;
         font-size: 12px;
         line-height: 14px;
+        max-width: calc(100% - 16px);
       }
     
       .Irisen {
-        left: 140px;
-        width: 320px;
-        top: -155px;
+        position: absolute;
+        left: 150px;
+        top: 53px;
+        width: calc(60% - 16px);
         font-size: 12px;
         line-height: 14px;
       }
     
       .cover {
         position: absolute;
-        width: 464px;
-        height: 261px;
+        width: calc(100% - 16px);
+        height: 216px;
         left: 8px;
-        right: 8px;
-        top:370px;
+        top: 340px;
         display: block;
         object-fit: cover;
       }
-    
       .pag1 {
         position: absolute;
-        width: 232px;
-        height: 345px;
-        top: 631px;
+        width: 50%;
+        height: 245px;
         left: 8px;
-        right: 8px;
+        top: 556px;
         display: block;
         object-fit: cover;
       }
     
       .pag2 {
         position: absolute;
-        width: 240px;
-        height: 345px;
-        top: 631px;
-        left: 232px;
-        right: 8px;
+        width: calc(50% - 8px);
+        height: 245px;
+        left: 50%;
+        margin-right: 8px;
+        top: 556px;
         display: block;
         object-fit: cover;
       }
     
       .pag3 {
         position: absolute;
-        width: 464px;
-        height: 261px;
-        top:976px;
+        width: calc(100% - 16px);
+        height: 216px;
         left: 8px;
-        right: 8px;
+        top: 801px;
         display: block;
         object-fit: cover;
       }
@@ -302,11 +318,10 @@
   
       .vid1{
         position: absolute;
-        width: 464px;
-        height: auto;
+        width: calc(100% - 16px);
+        height: 216px;
         left: 8px;
-        right: 8px;
-        top: 1237px;
+        top: 1017px;
         display: block;
         object-fit: fill;
       }
