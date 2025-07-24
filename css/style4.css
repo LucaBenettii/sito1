@@ -1,18 +1,11 @@
-@font-face {
-  font-family: 'Aut Aut Grotesk';
-  src: url('AutAutGrotesk.woff2') format('woff2'),
-       url('AutAutGrotesk.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 
+/* ====== BASE / DESKTOP ====== */
 body {
   margin: 0;
-  font-family: 'Aut Aut Grotesk', Helvetica, sans-serif;
+  font-family:Helvetica, sans-serif;
   background-color: white;
   color: black;
 }
-
 /* HEADER */
 header {
   position: fixed;
@@ -41,344 +34,387 @@ header .About a:hover {
   color: #d8d9d8;
 }
 
-.Name, .About a {
+.Name,
+.About a {
   font-size: 16px;
   white-space: nowrap;
 }
+
 /* MAIN */
 main {
   padding-top: 54px; /* spazio per header fisso */
 }
-.Description{
-    white-space: pre-line;
+
+.Description {
+  white-space: pre-line;
   position: relative;
   left: 16px;
   top: 110px;
   font-size: 16px;
   font-weight: bold;
+  line-height: 18px;
 }
-.Tego{
+
+.Tego {
   position: relative;
   width: 589px;
   left: 365px;
-  top: -195px;
+  top: -140px;
   font-size: 16px;
   line-height: 18px;
 }
-.Description.mobile{
+
+.Description.mobile {
   display: none;
 }
-.Description.tablet{
+
+.Description.tablet {
   display: none;
 }
-.coverT{
-    position: absolute;
-    width: 1408px;
-    height: 735px;
-    right: 16px;
-    left: 16px;
-    display: block;
-    object-fit: cover;
-    top: 590px;
-  }
-  .pag5{
+
+.coverT {
+  position: absolute;
+  width: 1408px;
+  height: 735px;
+  right: 16px;
+  left: 16px;
+  display: block;
+  object-fit: cover;
+  top: 590px;
+}
+
+.pag5 {
   position: absolute;
   width: 704px;
-  height: 1055px;
-  top:1325px ;
-    right: 16px;
-    left: 16px;
-    display: block;
-    object-fit:cover;
-  }
-  .pag6{
-    position: absolute;
-    width: 704px;
-    height: 1055px;
-    top:1325px ;
-      right: 16px;
-      left: 720px;
-      display: block;
-      object-fit: cover;
-    }
-    .pag7{
-      position: absolute;
-      width: 1408px;
-    height: 735px;
-      top: 2380px;
-        right: 16px;
-        left: 16px;
-        display: block;
-        object-fit: cover;
-      }
-      .pag9{
-        position: absolute;
-        width: 704px;
-        height: 1038px;
-        top:3115px ;
-          right: 16px;
-          left: 16px;
-          display: block;
-          object-fit:cover;
-        }
-        .pag8{
-          position: absolute;
-          width: 704px;
-          height: 1038px;
-          top:3115px ;
-            right: 16px;
-            left: 720px;
-            display: block;
-            object-fit:cover;
-          }
+  height: 955px;
+  top: 1325px;
+  right: 16px;
+  left: 16px;
+  display: block;
+  object-fit: cover;
+}
 
-        .vid2{
-          position: absolute;
-          width: 1408px;
-          height: 735px;
-          top:3819px ;
-            right: 16px;
-            left: 16px;
-            display: block;
-            object-fit: cover;
-            
-          }
-          .vid3{
-            position: absolute;
-            width: 1408px;
-            height: 735px;
-            top:4554px ;
-              right: 16px;
-              left: 16px;
-              display: block;
-              object-fit: cover;
-              
-            }
+.pag6 {
+  position: absolute;
+  width: 704px;
+  height: 955px;
+  top: 1325px;
+  right: 16px;
+  left: 720px;
+  display: block;
+  object-fit: cover;
+}
 
-      
+.pag7 {
+  position: absolute;
+  width: 1408px;
+  height: 735px;
+  top: 2280px;
+  right: 16px;
+  left: 16px;
+  display: block;
+  object-fit: cover;
+}
 
-/* RESPONSIVE - TABLET */
+.pag9 {
+  position: absolute;
+  width: 704px;
+  height: 1038px;
+  top: 3015px;
+  right: 16px;
+  left: 16px;
+  display: block;
+  object-fit: cover;
+}
+
+.pag8 {
+  position: absolute;
+  width: 704px;
+  height: 1038px;
+  top: 3015px;
+  right: 16px;
+  left: 720px;
+  display: block;
+  object-fit: cover;
+}
+
+.vid2 {
+  position: absolute;
+  width: 1408px;
+  height: 735px;
+  top: 3719px;
+  right: 16px;
+  left: 16px;
+  display: block;
+  object-fit: cover;
+}
+
+.vid3 {
+  position: absolute;
+  width: 1408px;
+  height: 735px;
+  top: 4454px;
+  right: 16px;
+  left: 16px;
+  display: block;
+  object-fit: cover;
+}
+
+/* ====== RESPONSIVE - TABLET ====== */
 @media (max-width: 768px) {
   header {
     left: 16px;
     right: 16px;
   }
-  .Description{
-    display: none;
-  }
-  .Description.tablet{
-    display: block;
-    left: 16px;
-    top: 50px;
-    line-height: 18px;
-  } 
-  .Description.mobile{
-    display: none;
-
-  }
-  .Tego {
-    left: 200px;
-    width: 540px;
-    top: -254px; ;
-    line-height: 18px;
-  }
-  .coverT{
-    position: absolute;
-    width: 736px;
-    height: 384.2px;
-  top: 460px ;
-    right: 16px;
-    left: 16px;
-    display: block;
-    object-fit: cover;
-  }
-  .pag5{
-    position: absolute;
-    width: 368px;
-    height: 550px;
-    top: 844.2px;
-      right: 16px;
-      left: 16px;
-      display: block;
-      object-fit: cover;
-    }
-    .pag6{
-      position: absolute;
-      width: 368px;
-      height: 550px;
-      top: 844.2px;
-        right: 16px;
-        left: 384px;
-        display: block;
-        object-fit: cover;
-      }
-      .pag7{
-        position: absolute;
-        width: 736px;
-        height: 384.2px;
-        top: 1394.2px;
-          right: 16px;
-          left: 16px;
-          display: block;
-          object-fit: cover;
-        }
-        .pag9{
-          position: absolute;
-          width: 368px;
-          height: 542px;
-          top: 1778.4px;
-            right: 16px;
-            left: 16px;
-            display: block;
-            object-fit: cover;
-          }
-          .pag8{
-            position: absolute;
-            width: 368px;
-            height: 542px;
-            top: 1778.4px;
-              right: 16px;
-              left: 384px;
-              display: block;
-              object-fit: cover;
-            }
-            .vid2{
-              position: absolute;
-              width: 736px;
-              height: 384px;
-                right: 16px;
-                left: 16px;
-                display: block;
-                top: 2320.4px; ;
-            }
-            .vid3{
-              position: absolute;
-              width: 736px;
-              height: 384px;
-                right: 16px;
-                left: 16px;
-                display: block;
-                top: 2704.4px; ;
-            }
-      }
-
-/* RESPONSIVE - SMARTPHONE */
-@media (max-width: 480px) {
-  header {
-    left: 8px;
-    right: 8px;
-  }
-  .Name{
-    font-size: 12px;
-  }
-  .About a{
-    font-size: 12px;
-  }
 
   .Description {
     display: none;
   }
-  .Description.tablet{
-    display: none;
-  }
-  .Description.mobile {
+
+  .Description.tablet {
     display: block;
-    left: 8px;
+    left: 16px;
     top: 50px;
-    font-size: 12px;
-    line-height: 14px;
+    line-height: 18px;
+  }
+
+  .Description.mobile {
+    display: none;
   }
 
   .Tego {
-    left: 140px;
-    width: 320px;
-    top: -228px;
-    font-size: 12px;
-    line-height: 14px;
+    left: 200px;
+    width: 540px;
+    top: -254px;
+    line-height: 18px;
   }
-
 
   .coverT {
     position: absolute;
-    width: 464px;
-    height: 261px;
-    top: 440px;
-    left: 8px;
-    right: 8px;
-    display: block;
-    object-fit: cover;
-  }
-
-  .pag6 {
-    position: absolute;
-    width: 232px;
-    height: 345px;
-    top: 701px;
-    left: 240px;
-    right: 8px;
+    width: 736px;
+    height: 384.2px;
+    top: 460px;
+    right: 16px;
+    left: 16px;
     display: block;
     object-fit: cover;
   }
 
   .pag5 {
     position: absolute;
-    width: 232px;
-    height: 345px;
-    top:701px;
-    left: 8px;
-    right: 8px;
+    width: 368px;
+    height: 550px;
+    top: 844.2px;
+    right: 16px;
+    left: 16px;
+    display: block;
+    object-fit: cover;
+  }
+
+  .pag6 {
+    position: absolute;
+    width: 368px;
+    height: 550px;
+    top: 844.2px;
+    right: 16px;
+    left: 384px;
     display: block;
     object-fit: cover;
   }
 
   .pag7 {
     position: absolute;
-    width: 464px;
-    height: 261px;
-    top: 1046px;
-    left: 8px;
-    right: 8px;
+    width: 736px;
+    height: 384.2px;
+    top: 1394.2px;
+    right: 16px;
+    left: 16px;
     display: block;
     object-fit: cover;
   }
 
-  .pag9{
+  .pag9 {
     position: absolute;
-    width: 232px;
-    height: 345px;
-    top: 1307px;
-      right: 8px;
-      left: 8px;
-      display: block;
-      object-fit: cover;
-    }
-    .pag8{
-      position: absolute;
-      width: 232px;
-    height: 345px;
-      top: 1307px;
-        right: 8px;
-        left: 240px;
-        display: block;
-        object-fit: cover;
-      }
-      .vid2{
-        position: absolute;
-        width: 464px;
-    height: 261px;
-          right: 18px;
-          left: 8px;
-          display: block;
-          top: 1652px; 
-      }
-      .vid3{
-        position: absolute;
-        width: 464px;
-        height: 261px;
-          right: 8px;
-          left: 8px;
-          display: block;
-          top:1913px;
-      }
+    width: 368px;
+    height: 542px;
+    top: 1778.4px;
+    right: 16px;
+    left: 16px;
+    display: block;
+    object-fit: cover;
+  }
 
+  .pag8 {
+    position: absolute;
+    width: 368px;
+    height: 542px;
+    top: 1778.4px;
+    right: 16px;
+    left: 384px;
+    display: block;
+    object-fit: cover;
+  }
+
+  .vid2 {
+    position: absolute;
+    width: 736px;
+    height: 384px;
+    right: 16px;
+    left: 16px;
+    display: block;
+    top: 2320.4px;
+  }
+
+  .vid3 {
+    position: absolute;
+    width: 736px;
+    height: 384px;
+    right: 16px;
+    left: 16px;
+    display: block;
+    top: 2704.4px;
+  }
 }
+
+/* ====== RESPONSIVE - SMARTPHONE ====== */
+@media (max-width: 480px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 8px;
+    right: 8px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .Name a,
+  .About a {
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .Description {
+    display: none;
+  }
+
+  .Description.tablet {
+    display: none;
+  }
+
+  .Description.mobile {
+    display: block;
+    position: absolute;
+    left: 8px;
+    top: 53px;
+    font-size: 12px;
+    line-height: 14px;
+    max-width: calc(100% - 16px);
+  }
+
+  .Tego {
+    position: absolute;
+    left: 150px;
+    top: 53px;
+    width: calc(60% - 16px);
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .coverT {
+    position: absolute;
+    width: calc(100% - 16px);
+    height: 216px;
+    left: 8px;
+    top: 440px;
+    display: block;
+    object-fit: cover;
+  }
+
+  .pag5 {
+    position: absolute;
+    width: 50%;
+    height: 245px;
+    left: 8px;
+    top: 656px;
+    display: block;
+    object-fit: cover;
+  }
+
+  .pag6 {
+    position: absolute;
+    width: calc(50% - 8px);
+    height: 245px;
+    left: 50%;
+    margin-right: 8px;
+    top: 656px;
+    display: block;
+    object-fit: cover;
+  }
+
+  .pag7 {
+    position: absolute;
+    width: calc(100% - 16px);
+    height: 216px;
+    left: 8px;
+    top: 901px;
+    display: block;
+    object-fit: cover;
+  }
+
+  .pag9 {
+    position: absolute;
+    width: 50%;
+    height: 245px;
+    left: 8px;
+    top: 1117px;
+    display: block;
+    object-fit: cover;
+  }
+
+  .pag8 {
+    position: absolute;
+    width: calc(50% - 8px);
+    height: 245px;
+    left: 50%;
+    margin-right: 8px;
+    display: block;
+    object-fit: cover;
+    top: 1117px;
+  }
+
+  .vid2 {
+    position: absolute;
+    width: calc(100% - 16px);
+    height: 216px;
+    left: 8px;
+    display: block;
+    object-fit: fill;
+    top: 1362px;
+  }
+
+  .vid3 {
+    position: absolute;
+    width: calc(100% - 16px);
+    height: 216px;
+    left: 8px;
+    display: block;
+    object-fit: fill;
+    top: 1578px;
+  }
+}
+
