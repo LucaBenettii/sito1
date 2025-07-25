@@ -245,6 +245,7 @@ main {
     height: 20px;
     flex-direction: row;
     align-items: center;
+    
   }
 
   header .Name a,
