@@ -3,20 +3,36 @@
 
 let lastScrollY = window.scrollY;
 const header = document.querySelector('header');
+const delta = 5; // per evitare flicker su piccoli movimenti
 
-window.addEventListener('scroll', () => {
-  const currentScrollY = window.scrollY;
+window.addEventListener(
+  'scroll',
+  () => {
+    const currentScrollY = window.scrollY;
 
-  if (currentScrollY > lastScrollY) {
-    // Scrolling verso il basso → nascondi header
-    header.classList.add('hide');
-  } else {
-    // Scrolling verso l'alto → mostra header
-    header.classList.remove('hide');
-  }
+    // Se siamo tornati all'inizio della pagina, mostra sempre l'header
+    if (currentScrollY <= 0) {
+      header.classList.remove('hide');
+      lastScrollY = 0;
+      return;
+    }
 
-  lastScrollY = currentScrollY;
-});
+    // Evita di reagire a micro scroll
+    if (Math.abs(currentScrollY - lastScrollY) > delta) {
+      if (currentScrollY > lastScrollY) {
+        // Scorro in giù → nascondi
+        header.classList.add('hide');
+      } else {
+        // Scorro in su → mostra
+        header.classList.remove('hide');
+      }
+      lastScrollY = currentScrollY;
+    }
+  },
+  { passive: true }
+);
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".section").forEach(section => {
